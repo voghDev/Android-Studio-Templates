@@ -11,7 +11,8 @@ GoogleMapsActivity
 GoogleMapsWearActivity
 LoginActivity
 MasterDetailFlow
-MVP*
+MVPActivity-Java
+MVPActivity-Kotlin
 NavigationDrawerActivity
 ScrollActivity
 SettingsActivity
