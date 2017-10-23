@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="MVP Kotlin Fragment"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVP-based Fragment in Kotlin">
+
+        <category value="voghDev" />
+        <formfactor value="Mobile" />
+
+        <parameter
+            id="fragmentClass"
+            name="Fragment Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainFragment"
+            help="The name of the fragment class to create" />   
+
+    <parameter
+            id="layoutName"
+            name="Layout Name"
+            type="string"
+            constraints="layout|unique|nonempty"
+            suggest="fragment_${classToResource(fragmentClass)}"
+            default="fragment_main"
+            help="The name of the layout to create for the fragment" />
+
+     <parameter
+            id="presenterClass"
+            name="Presenter Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            suggest="${underscoreToCamelCase(classToResource(fragmentClass))}Presenter"
+            default="MainPresenter"
+            help="The name of the presenter class to create" />  
+
+    <parameter
+            id="userRepository"
+            name="Include UserRepository"
+            type="boolean"
+            default="false"
+            help="The default repository will be included" />
+
+     <parameter
+            id="hasDagger"
+            name="Dagger2 dependency injection"
+            type="boolean"
+            default="false"
+            help="Fields will be injected using Dagger2 and getComponent call will be included" />
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            suggest="${packageName}"
+            default="com.mycompany.myapp" />
+
+    <parameter
+            id="includeTest"
+            name="Include Test for Presenter class"
+            type="boolean"
+            default="false"
+            help="A Test class will be created for Presenter" />
+
+    <parameter
+            id="testFolder"
+            name="Test folder"
+            type="string"
+            constraints="nonempty"
+            suggest="app/src/test/kotlin"
+            visibility="includeTest"
+            default="app/src/test/kotlin" />
+
+        <globals file="globals.xml.ftl" />
+        <execute file="recipe.xml.ftl" />
+
+</template>
