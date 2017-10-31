@@ -1,7 +1,7 @@
-package ${packageName}
+package ${packageName}.ui.fragment
 
 import android.os.Bundle
-import ${packageName}.ui.activity.BaseFragment
+import ${packageName}.ui.fragment.BaseFragment
 <#if hasDagger>import javax.inject.Inject</#if>
 <#if userRepository>import ${packageName}.repository.UserRepository</#if>
 
