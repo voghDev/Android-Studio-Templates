@@ -1,4 +1,4 @@
-package ${packageName}
+package ${packageName}.ui.presenter
 
 import ${packageName}.ui.presenter.Presenter
 import ${packageName}.repository.UserRepository
