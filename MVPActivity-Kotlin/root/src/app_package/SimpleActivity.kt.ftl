@@ -1,4 +1,4 @@
-package ${packageName}
+package ${packageName}.ui.activity
 
 import android.os.Bundle
 import ${packageName}.ui.activity.BaseActivity
