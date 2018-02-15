@@ -15,17 +15,17 @@ import ${packageName}.repository.UserRepository;
 public class ${activityClass} extends BaseActivity implements ${presenterClass}.MVPView, ${presenterClass}.Navigator {
     ${presenterClass} presenter;
 
-    <#if hasDagger>@Inject </#if><#if userRepository>UserRepository userRepository;</#if>
-    
+    <#if hasDagger>@Inject </#if><#if userRepository>UserRepository userRepository;</#if>    
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         <#if hasDagger>
             getComponent().inject(this);
         </#if>
 
-        presenter = new ${presenterClass}(new AndroidResLocator(this)<#if userRepository>, userRepository</#if>);
+        presenter = new ${presenterClass}(new AndroidResLocator(this));
         presenter.setView(this);
         presenter.setNavigator(this);
 
