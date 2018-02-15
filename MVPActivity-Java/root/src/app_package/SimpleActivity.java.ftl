@@ -2,6 +2,9 @@ package ${packageName}.ui.activity;
 
 import android.os.Bundle;
 import ${packageName}.ui.activity.BaseActivity;
+import ${packageName}.R;
+import ${packageName}.ui.AndroidResLocator;
+import ${packageName}.ui.presenter.UserProfilePresenter;
 <#if hasDagger>
 import javax.inject.Inject;
 </#if>
@@ -12,7 +15,7 @@ import ${packageName}.repository.UserRepository;
 public class ${activityClass} extends BaseActivity implements ${presenterClass}.MVPView, ${presenterClass}.Navigator {
     ${presenterClass} presenter;
 
-    <#if hasDagger>@Inject </#if><#if userRepository>UserRepository userRepository</#if>
+    <#if hasDagger>@Inject </#if><#if userRepository>UserRepository userRepository;</#if>
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

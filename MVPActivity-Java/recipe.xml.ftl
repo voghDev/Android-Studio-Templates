@@ -6,13 +6,13 @@
     <open file="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 
     <instantiate from="root/src/app_package/SimpleActivity.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/ui/activity/${activityClass}.kt" />
+                   to="${escapeXmlAttribute(srcOut)}/ui/activity/${activityClass}.java" />
 
     <instantiate from="root/src/app_package/SimplePresenter.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/ui/presenter/${presenterClass}.kt" />
+                   to="${escapeXmlAttribute(srcOut)}/ui/presenter/${presenterClass}.java" />
 
     <#if includeTest>
         <instantiate from="root/src/app_package/SimplePresenterTest.java.ftl"
-                   to="${testFolder}/${slashedPackageName(packageName)}/ui/presenter/${presenterClass}Test.kt" />
+                   to="${testFolder}/${slashedPackageName(packageName)}/ui/presenter/${presenterClass}Test.java" />
     </#if>
 </recipe>
