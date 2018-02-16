@@ -4,7 +4,7 @@ import android.os.Bundle;
 import ${packageName}.ui.activity.BaseActivity;
 import ${packageName}.R;
 import ${packageName}.ui.AndroidResLocator;
-import ${packageName}.ui.presenter.UserProfilePresenter;
+import ${packageName}.ui.presenter.${presenterClass};
 <#if hasDagger>
 import javax.inject.Inject;
 </#if>
