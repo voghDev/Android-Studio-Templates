@@ -11,7 +11,7 @@ import org.mockito.Mockito.times;
 import org.mockito.Mockito.verify;
 
 
-class ${presenterClass}Test() {
+class ${presenterClass}Test {
 
     <#if userRepository>
     @Mock
@@ -33,7 +33,7 @@ class ${presenterClass}Test() {
     }
 
     private ${presenterClass} createMockedPresenter() {
-        ${presenterClass} presenter = ${presenterClass}(mockResLocator<#if userRepository>, mockUserRepository</#if>);
+        ${presenterClass} presenter = new ${presenterClass}(mockResLocator<#if userRepository>, mockUserRepository</#if>);
         presenter.setView(mockView);
         presenter.setNavigator(mockNavigator);
         return presenter;
