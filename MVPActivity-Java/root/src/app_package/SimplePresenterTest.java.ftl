@@ -1,5 +1,6 @@
 package ${packageName}.ui.presenter;
 
+import ${packageName}.ui.ResLocator;
 import ${packageName}.ui.presenter.Presenter;
 import ${packageName}.repository.UserRepository;
 import org.junit.Assert.assertEquals;
