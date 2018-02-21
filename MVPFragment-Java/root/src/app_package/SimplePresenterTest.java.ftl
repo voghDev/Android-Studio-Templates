@@ -1,5 +1,6 @@
 package ${packageName}.ui.presenter;
 
+import ${packageName}.ui.ResLocator;
 import ${packageName}.ui.presenter.Presenter;
 import ${packageName}.repository.UserRepository;
 import org.junit.Assert.assertEquals;
@@ -9,7 +10,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Mockito.times;
 import org.mockito.Mockito.verify;
-
 
 public class ${presenterClass}Test() {
 
