@@ -11,7 +11,7 @@ import org.mockito.Mockito.times;
 import org.mockito.Mockito.verify;
 
 
-class ${presenterClass}Test {
+public class ${presenterClass}Test {
 
     <#if userRepository>
     @Mock
