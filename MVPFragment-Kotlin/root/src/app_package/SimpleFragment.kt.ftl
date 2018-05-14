@@ -18,7 +18,7 @@ class ${fragmentClass} : BaseFragment(), ${presenterClass}.MVPView, ${presenterC
             getComponent().inject(this)
         </#if>
 
-        presenter = ${presenterClass}(this<#if userRepository>, userRepository</#if>)
+        presenter = ${presenterClass}(context<#if userRepository>, userRepository</#if>)
         presenter?.view = this
         presenter?.navigator = this
 
