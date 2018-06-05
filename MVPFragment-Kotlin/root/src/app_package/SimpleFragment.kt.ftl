@@ -25,7 +25,5 @@ class ${fragmentClass} : BaseFragment(), ${presenterClass}.MVPView, ${presenterC
         presenter?.initialize()
     }
 
-    override fun getLayoutId() : Int {
-        return R.layout.${layoutName}
-    }
+    override fun getLayoutId() : Int = R.layout.${layoutName}    
 }
