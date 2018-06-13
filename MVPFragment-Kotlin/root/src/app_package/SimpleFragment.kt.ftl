@@ -2,6 +2,10 @@ package ${packageName}.ui.fragment
 
 import android.os.Bundle
 import ${packageName}.ui.fragment.BaseFragment
+<#if useCoroutines>
+import kotlinx.coroutines.experimental.CommonPool
+import kotlinx.coroutines.experimental.async
+</#if>
 <#if hasDagger>import javax.inject.Inject</#if>
 <#if userRepository>import ${packageName}.repository.UserRepository</#if>
 
@@ -22,7 +26,9 @@ class ${fragmentClass} : BaseFragment(), ${presenterClass}.MVPView, ${presenterC
         presenter?.view = this
         presenter?.navigator = this
 
-        presenter?.initialize()
+        <#if useCoroutines>launch(CommonPool) {</#if>
+        <#if useCoroutines>    </#if>presenter?.initialize()
+        <#if useCoroutines>}</#if>
     }
 
     override fun getLayoutId() : Int = R.layout.${layoutName}    
