@@ -51,6 +51,13 @@
             help="Fields will be injected using Dagger2 and getComponent call will be included" />
 
     <parameter
+            id="useCoroutines"
+            name="Use kotlinx.coroutines"
+            type="boolean"
+            default="false"
+            help="Methods will be declared suspend and coroutines will be used" />
+
+    <parameter
             id="packageName"
             name="Package name"
             type="string"

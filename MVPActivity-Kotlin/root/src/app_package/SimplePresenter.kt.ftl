@@ -8,7 +8,7 @@ import android.content.Context
 class ${presenterClass}(val context: Context<#if userRepository>, val userRepository: UserRepository</#if>) :
         Presenter<${presenterClass}.MVPView, ${presenterClass}.Navigator>() {
 
-    override fun initialize() {
+    override<#if useCoroutines> suspend</#if> fun initialize() {
 
     }
 
