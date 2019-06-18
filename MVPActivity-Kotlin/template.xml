@@ -81,6 +81,13 @@
             help="A Test class will be created for Presenter" />
 
     <parameter
+            id="allFilesSamePackage"
+            name="Put all files in the same Package"
+            type="boolean"
+            default="false"
+            help="No subpackages will be created (ideal for Packaging by feature)" />
+
+    <parameter
             id="testFolder"
             name="Test folder"
             type="string"
